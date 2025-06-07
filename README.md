@@ -1,2 +1,2 @@
 # tcc-usp
- Código Anacor do Trabalho de Conclusão de Curso da pós-graduação - USP
+ Código Anacor do trabalho de conclusão de curso da pós-graduação - USP
