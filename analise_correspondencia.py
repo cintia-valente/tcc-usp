@@ -151,7 +151,7 @@ print("\nGerando gráfico para 'Escolaridade' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'Escolaridade', 'BemEstarEmocional', 'Escolaridade x Bem-estar emocional')
 
 print("\nGerando gráfico para 'SegurancaPsicologica' x 'BemEstarEmocional'")
-analise_correspondencia(df_questionario, 'SegurançaPsicologica', 'BemEstarEmocional', 'Segurança psicológica x Bem-estar emocional')
+analise_correspondencia(df_questionario, 'SegurancaPsicologica', 'BemEstarEmocional', 'Segurança psicológica x Bem-estar emocional')
 
 print("\nGerando gráfico para 'ExperienciaAgil' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'ExperienciaAgil', 'SegurancaPsicologica', 'Experiencia ágil x Segurança psicológica')
