@@ -145,7 +145,7 @@ print("\nGerando gráfico para 'FaixaEtaria' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'FaixaEtaria', 'BemEstarEmocional', 'Faixa etária x Bem-estar emocional')
 
 print("\nGerando gráfico para 'Escolaridade' x 'SegurancaPsicologica'")
-analise_correspondencia(df_questionario, 'Escolaridade', 'BemEstarEmocional', 'Escolaridade x Bem-estar emocional')
+analise_correspondencia(df_questionario, 'Escolaridade', 'BemEstarEmocional', 'Escolaridade x Seguranca psicológica')
 
 print("\nGerando gráfico para 'Escolaridade' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'Escolaridade', 'BemEstarEmocional', 'Escolaridade x Bem-estar emocional')
