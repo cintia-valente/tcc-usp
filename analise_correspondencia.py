@@ -111,26 +111,38 @@ def analise_correspondencia(df, col1, col2, title_text):
     plt.axhline(0, color='grey', lw=0.7)
     plt.axvline(0, color='grey', lw=0.7)
     plt.title(f'Análise de Correspondência: {title_text}')
-    plt.legend()
+    plt.subplots_adjust(right=0.5)
     plt.grid(True)
-    plt.tight_layout(rect=[0, 0, 0.85, 1])
+    plt.tight_layout(rect=[0, 0, 1, 1])
 
     # Prepara o texto da legenda para as categorias da primeira coluna
-    legend_text = f"\nLegenda das Categorias de '{col1}':\n"
+    legend_text = f"\nLegenda das Categorias de $\\bf{{{col1}}}$':\n\n"
     for num, name in legend_map.items():
-        legend_text += f"{num}: {name}\n"
+        legend_text += f"$\\bf{{{num}}}$: {name}\n"
 
-    plt.figtext(0.88, 0.5, legend_text, fontsize=9, ha='left', va='center',
-                bbox=dict(boxstyle="round,pad=0.5", fc="wheat", ec="black", lw=0.5, alpha=0.8))
+    legend_fig = plt.figure("Legenda das Categorias", figsize=(5, 6)) 
+    legend_fig.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
 
+    plt.figtext(0.05, 0.95, legend_text.strip(), ha='left', va='top', fontsize=9,
+            bbox=dict(boxstyle="round,pad=0.5", fc="wheat", ec="black", lw=0.5, alpha=0.8))
+    
     plt.show()
 
 # --- Chamadas da função para gerar os gráficos ---
 print("Gerando gráfico para 'GrupoMinoritario' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'GrupoMinoritario', 'SegurancaPsicologica', 'Grupo Minoritário x Segurança psicológica')
 
+print("\nGerando gráfico para 'GrupoMinoritario' x 'ImpactoDesempenho'")
+analise_correspondencia(df_questionario, 'GrupoMinoritario', 'ImpactoDesempenho', 'GrupoMinoritario x Impacto')
+
+print("Gerando gráfico para 'GrupoMinoritario' x 'LiderancaInclusiva'")
+analise_correspondencia(df_questionario, 'GrupoMinoritario', 'LiderancaInclusiva', 'Grupo Minoritário x Liderança inclusiva')
+
 print("\nGerando gráfico para 'Discriminacao' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'Discriminacao', 'SegurancaPsicologica', 'Discriminação x Segurança psicológica')
+
+print("\nGerando gráfico para 'Discriminacao' x 'ImpactoDesempenho'")
+analise_correspondencia(df_questionario, 'Discriminacao', 'ImpactoDesempenho', 'Discriminação x ImpactoDesempenho')
 
 print("\nGerando gráfico para 'Genero' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'Genero', 'BemEstarEmocional', 'Gênero x Bem-estar emocional')
@@ -151,7 +163,7 @@ print("\nGerando gráfico para 'Escolaridade' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'Escolaridade', 'BemEstarEmocional', 'Escolaridade x Bem-estar emocional')
 
 print("\nGerando gráfico para 'SegurancaPsicologica' x 'BemEstarEmocional'")
-analise_correspondencia(df_questionario, 'SegurancaPsicologica', 'BemEstarEmocional', 'Segurança psicológica x Bem-estar emocional')
+analise_correspondencia(df_questionario, 'SeguranaPsicologica', 'BemEstarEmocional', 'Segurança psicológica x Bem-estar emocional')
 
 print("\nGerando gráfico para 'ExperienciaAgil' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'ExperienciaAgil', 'SegurancaPsicologica', 'Experiencia ágil x Segurança psicológica')
@@ -180,14 +192,5 @@ analise_correspondencia(df_questionario, 'Inseguranca', 'SegurancaPsicologica', 
 print("\nGerando gráfico para 'Inseguranca' x 'ImpactoDesempenho'")
 analise_correspondencia(df_questionario, 'Inseguranca', 'ImpactoDesempenho', 'Insegurança x Impacto')
 
-print("\nGerando gráfico para 'GrupoMinoritario' x 'ImpactoDesempenho'")
-analise_correspondencia(df_questionario, 'GrupoMinoritario', 'ImpactoDesempenho', 'GrupoMinoritario x Impacto')
-
 print("\nGerando gráfico para 'Representatividade' x 'ImpactoDesempenho'")
 analise_correspondencia(df_questionario, 'Representatividade', 'ImpactoDesempenho', 'Representatividade x Impacto')
-
-print("\nGerando gráfico para 'Discriminacao' x 'ImpactoDesempenho'")
-analise_correspondencia(df_questionario, 'Discriminacao', 'ImpactoDesempenho', 'Discriminação x ImpactoDesempenho')
-
-print("Gerando gráfico para 'GrupoMinoritario' x 'LiderancaInclusiva'")
-analise_correspondencia(df_questionario, 'GrupoMinoritario', 'LiderancaInclusiva', 'Grupo Minoritário x Liderança inclusiva')
