@@ -116,7 +116,7 @@ def analise_correspondencia(df, col1, col2, title_text):
     plt.tight_layout(rect=[0, 0, 1, 1])
 
     # Prepara o texto da legenda para as categorias da primeira coluna
-    legend_text = f"\nLegenda das Categorias de $\\bf{{{col1}}}$':\n\n"
+    legend_text = f"\nLegenda das Categorias de $\\bf{{{col1}}}$:\n\n"
     for num, name in legend_map.items():
         legend_text += f"$\\bf{{{num}}}$: {name}\n"
 
