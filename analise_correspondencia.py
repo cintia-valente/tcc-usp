@@ -120,7 +120,7 @@ def analise_correspondencia(df, col1, col2, title_text):
     for num, name in legend_map.items():
         legend_text += f"$\\bf{{{num}}}$: {name}\n"
 
-    legend_fig = plt.figure("Legenda das Categorias", figsize=(5, 6)) 
+    legend_fig = plt.figure("Legenda das Categorias", figsize=(5, 6))  # ajuste o tamanho se quiser
     legend_fig.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
 
     plt.figtext(0.05, 0.95, legend_text.strip(), ha='left', va='top', fontsize=9,
