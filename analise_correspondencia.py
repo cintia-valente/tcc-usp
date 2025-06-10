@@ -120,7 +120,7 @@ def analise_correspondencia(df, col1, col2, title_text):
     for num, name in legend_map.items():
         legend_text += f"$\\bf{{{num}}}$: {name}\n"
 
-    legend_fig = plt.figure("Legenda das Categorias", figsize=(5, 6))  # ajuste o tamanho se quiser
+    legend_fig = plt.figure("Legenda das Categorias", figsize=(5, 6))
     legend_fig.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
 
     plt.figtext(0.05, 0.95, legend_text.strip(), ha='left', va='top', fontsize=9,
@@ -133,7 +133,7 @@ print("Gerando gráfico para 'GrupoMinoritario' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'GrupoMinoritario', 'SegurancaPsicologica', 'Grupo Minoritário x Segurança psicológica')
 
 print("\nGerando gráfico para 'GrupoMinoritario' x 'ImpactoDesempenho'")
-analise_correspondencia(df_questionario, 'GrupoMinoritario', 'ImpactoDesempenho', 'GrupoMinoritario x Impacto')
+analise_correspondencia(df_questionario, 'GrupoMinoritario', 'ImpactoDesempenho', 'Grupo Minoritário x Impacto no desempenho')
 
 print("Gerando gráfico para 'GrupoMinoritario' x 'LiderancaInclusiva'")
 analise_correspondencia(df_questionario, 'GrupoMinoritario', 'LiderancaInclusiva', 'Grupo Minoritário x Liderança inclusiva')
@@ -142,7 +142,7 @@ print("\nGerando gráfico para 'Discriminacao' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'Discriminacao', 'SegurancaPsicologica', 'Discriminação x Segurança psicológica')
 
 print("\nGerando gráfico para 'Discriminacao' x 'ImpactoDesempenho'")
-analise_correspondencia(df_questionario, 'Discriminacao', 'ImpactoDesempenho', 'Discriminação x ImpactoDesempenho')
+analise_correspondencia(df_questionario, 'Discriminacao', 'ImpactoDesempenho', 'Discriminação x Impacto no desempenho')
 
 print("\nGerando gráfico para 'Genero' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'Genero', 'BemEstarEmocional', 'Gênero x Bem-estar emocional')
@@ -190,7 +190,7 @@ print("\nGerando gráfico para 'Inseguranca' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'Inseguranca', 'SegurancaPsicologica', 'Insegurança x Segurança psicológica')
 
 print("\nGerando gráfico para 'Inseguranca' x 'ImpactoDesempenho'")
-analise_correspondencia(df_questionario, 'Inseguranca', 'ImpactoDesempenho', 'Insegurança x Impacto')
+analise_correspondencia(df_questionario, 'Inseguranca', 'ImpactoDesempenho', 'Insegurança x Impacto no desempenho')
 
 print("\nGerando gráfico para 'Representatividade' x 'ImpactoDesempenho'")
-analise_correspondencia(df_questionario, 'Representatividade', 'ImpactoDesempenho', 'Representatividade x Impacto')
+analise_correspondencia(df_questionario, 'Representatividade', 'ImpactoDesempenho', 'Representatividade x Impacto no desempenho')
