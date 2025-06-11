@@ -166,10 +166,10 @@ print("\nGerando gráfico para 'SegurancaPsicologica' x 'BemEstarEmocional'")
 analise_correspondencia(df_questionario, 'SegurancaPsicologica', 'BemEstarEmocional', 'Segurança psicológica x Bem-estar emocional')
 
 print("\nGerando gráfico para 'ExperienciaAgil' x 'SegurancaPsicologica'")
-analise_correspondencia(df_questionario, 'ExperienciaAgil', 'SegurancaPsicologica', 'Experiencia ágil x Segurança psicológica')
+analise_correspondencia(df_questionario, 'ExperienciaAgil', 'SegurancaPsicologica', 'Experiência ágil x Segurança psicológica')
 
 print("\nGerando gráfico para 'ExperienciaAgil' x 'BemEstarEmocional'")
-analise_correspondencia(df_questionario, 'ExperienciaAgil', 'BemEstarEmocional', 'Experiencia ágil x Bem-estar emocional')
+analise_correspondencia(df_questionario, 'ExperienciaAgil', 'BemEstarEmocional', 'Experiência ágil x Bem-estar emocional')
 
 print("\nGerando gráfico para 'Diversidade' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'Diversidade', 'SegurancaPsicologica', 'Diversidade x Segurança psicológica')
@@ -178,7 +178,7 @@ print("\nGerando gráfico para 'Representatividade' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'Representatividade', 'SegurancaPsicologica', 'Representatividade x Segurança psicológica')
 
 print("\nGerando gráfico para 'RepresentatividadeNaLideranca' x 'SegurancaPsicologica'")
-analise_correspondencia(df_questionario, 'RepresentatividadeNaLideranca', 'SegurancaPsicologica', 'Representatividade na lideranca x Segurança psicológica')
+analise_correspondencia(df_questionario, 'RepresentatividadeNaLideranca', 'SegurancaPsicologica', 'Representatividade na liderança x Segurança psicológica')
 
 print("\nGerando gráfico para 'LiderancaInclusiva' x 'SegurancaPsicologica'")
 analise_correspondencia(df_questionario, 'LiderancaInclusiva', 'SegurancaPsicologica', 'Liderança inclusiva x Segurança psicológica')
