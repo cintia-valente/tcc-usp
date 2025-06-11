@@ -33,6 +33,17 @@ df_questionario = df_questionario.rename(columns={
 # --- Remoção de Colunas ---
 df_questionario = df_questionario.drop(columns=['Carimbo de data/hora'])
 
+if 'GrupoMinoritario' in df_questionario.columns:
+    def standardize_multiselect(text):
+        if pd.isna(text): # Lida com valores NaN (vazios)
+            return text
+        # Divide a string pelas vírgulas ou ponto e vírgulas
+        # Limpa espaços em branco em cada item e os ordena alfabeticamente
+        # Une os itens com ponto e vírgula para uma string padronizada
+        return ';'.join(sorted([s.strip() for s in text.replace(',', ';').split(';') if s.strip()]))
+
+    df_questionario['GrupoMinoritario'] = df_questionario['GrupoMinoritario'].apply(standardize_multiselect)
+
 def analise_correspondencia(df, col1, col2, title_text):
     # Cria a tabela de contingência
     tabela = pd.crosstab(df[col1], df[col2])
