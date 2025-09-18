@@ -74,7 +74,7 @@ def analise_correspondencia(df, col1, col2, title_text, label1, label2):
 
     plt.figure(figsize=(14, 10))
 
-    # Determina as coordenadas X e Y de forma robusta
+    # Determina as coordenadas X e Y
     # Se houver apenas 1 componente, a coordenada Y será 0, efetivamente plotando em 1D
     x_rows = rows_coords.iloc[:, 0]
     y_rows = rows_coords.iloc[:, 1] if rows_coords.shape[1] > 1 else pd.Series(0, index=rows_coords.index)
@@ -155,8 +155,6 @@ def analise_correspondencia(df, col1, col2, title_text, label1, label2):
     plt.show()
 
 # --- Chamadas da função para gerar os gráficos ---
-
-
 print("\nGerando gráfico para 'Impacto no Desempenho' x 'Representatividade'")
 analise_correspondencia(df_questionario, 'ImpactoDesempenho', 'Representatividade', 'Impacto no Desempenho x Representatividade', 'Impacto no Desempenho', 'Representatividade')
 
