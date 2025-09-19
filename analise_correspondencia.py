@@ -155,9 +155,6 @@ def analise_correspondencia(df, col1, col2, title_text, label1, label2):
     plt.show()
 
 # --- Chamadas da função para gerar os gráficos ---
-print("\nGerando gráfico para 'Impacto no Desempenho' x 'Representatividade'")
-analise_correspondencia(df_questionario, 'ImpactoDesempenho', 'Representatividade', 'Impacto no Desempenho x Representatividade', 'Impacto no Desempenho', 'Representatividade')
-
 print("Gerando gráfico para 'Grupo Minoritário' x 'Segurança Psicológica'")
 analise_correspondencia(df_questionario, 'GrupoMinoritario', 'SegurancaPsicologica', 'Grupo Minoritário x Segurança Psicológica', 'Grupo Minoritário', 'Segurança Psicológica')
 
